@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Group · Portfolios</title>
+    <meta name="description" content="Trang nhóm hiển thị thành viên và link qua portfolio của họ" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Nhóm · Portfolios</h1>
+        <p class="subtitle">Danh sách thành viên và đường dẫn tới portfolio.</p>
+        <div class="toolbar">
+          <input id="search" type="search" placeholder="Tìm theo tên, vai trò, tag…" aria-label="Tìm kiếm" />
+          <select id="sort">
+            <option value="name-asc">Tên (A → Z)</option>
+            <option value="name-desc">Tên (Z → A)</option>
+            <option value="role-asc">Vai trò (A → Z)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="cards" class="cards" aria-live="polite"></div>
+      <template id="card-template">
+        <a class="card" target="_blank" rel="noopener noreferrer">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="meta">
+            <h3 class="name"></h3>
+            <p class="role"></p>
+            <div class="tags"></div>
+          </div>
+          <span class="arrow" aria-hidden>→</span>
+        </a>
+      </template>
+      <p id="empty" class="empty" hidden>Không có thành viên nào khớp với từ khóa.</p>
+      <noscript>
+        Vui lòng bật JavaScript để xem danh sách thành viên.
+      </noscript>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Group · Made with ❤</small>
+      </div>
+    </footer>
+
+    <script src="data/members.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+  </html>
