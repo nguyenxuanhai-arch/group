@@ -30,5 +30,13 @@ window.GROUP_MEMBERS = [
     tags: ["Node.js","API","SQL"],
     emoji: "🧰",
     image: "assets/img/ron.jpg"
+  },
+  {
+    name: "Trần Minh Hưởng",
+    role: "Frontend Developer",
+    url: "https://huongtrannt.github.io/my-portfolio/",
+    tags: ["HTML","CSS","JavaScript"],
+    emoji: "💻",
+    image: "assets/img/huong.jpg"
   }
 ];
