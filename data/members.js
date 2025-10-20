@@ -11,7 +11,7 @@ window.GROUP_MEMBERS = [
     name: "Nguyễn Xuân Hải",
     role: "Backend Developer",
     url: "https://scalix.dev",
-    tags: ["Spring boot","Java"," Backend"],
+    tags: ["Spring Boot","Java","Backend","API"],
     emoji: "🧑‍💻",
     image: "assets/img/hai.png"
   },
@@ -19,15 +19,15 @@ window.GROUP_MEMBERS = [
     name: "Nguyễn Mạnh Hiền",
     role: "UX Designer",
     url: "https://hien-ll.github.io/mid-term/",
-    tags: ["UX","Figma","Prototype"],
+    tags: ["HTML5","CSS3","JavaScript","Figma","UI/UX Design"],
     emoji: "🎨",
     image: "assets/img/hien.jpg"
   },
   {
     name: "Tôn Thanh Ra Su Rôn",
-    role: "Backend Engineer",
+    role: "Frontend Developer",
     url: "https://ron050105.github.io/LapTrinhWWeb/",
-    tags: ["Node.js","API","SQL"],
+    tags: ["HTML5","CSS3","JavaScript"],
     emoji: "🧰",
     image: "assets/img/ron.jpg"
   },
@@ -35,8 +35,15 @@ window.GROUP_MEMBERS = [
     name: "Trần Minh Hưởng",
     role: "Frontend Developer",
     url: "https://huongtrannt.github.io/my-portfolio/",
-    tags: ["HTML","CSS","JavaScript"],
+    tags: ["HTML5","CSS3","JavaScript", "C++", "SQL", "Git", "Flutter"],
     emoji: "💻",
     image: "assets/img/huong.jpg"
+  },
+  {
+    name: "Hoàng Gia Triệu Phú (Đang cập nhật)",
+    role: "Full Stack Developer",
+    url: "#",
+    tags: ["React","Node.js","Web Development"],
+    emoji: "🚀",
   }
 ];

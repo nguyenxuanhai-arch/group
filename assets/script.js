@@ -1,9 +1,6 @@
 (function(){
   const elCards = document.getElementById('cards');
   const elTmpl = document.getElementById('card-template');
-  const elSearch = document.getElementById('search');
-  const elSort = document.getElementById('sort');
-  const elEmpty = document.getElementById('empty');
   const elYear = document.getElementById('year');
   if(elYear) elYear.textContent = new Date().getFullYear();
 
@@ -11,11 +8,6 @@
 
   function render(list){
     elCards.innerHTML = '';
-    if(!list.length){
-      elEmpty.hidden = false;
-      return;
-    }
-    elEmpty.hidden = true;
     const frag = document.createDocumentFragment();
     for(const m of list){
       const a = elTmpl.content.firstElementChild.cloneNode(true);
@@ -60,41 +52,6 @@
     elCards.appendChild(frag);
   }
 
-  function matches(m, q){
-    if(!q) return true;
-    const hay = [m.name, m.role, ...(m.tags||[])].join(' ').toLowerCase();
-    return hay.includes(q.toLowerCase());
-  }
-
-  function sortList(list, key){
-    const arr = list.slice();
-    if(key === 'name-desc') arr.sort((a,b)=>cmp(b.name,a.name));
-    else if(key === 'role-asc') arr.sort((a,b)=>cmp(a.role,b.role) || cmp(a.name,b.name));
-    else arr.sort((a,b)=>cmp(a.name,b.name));
-    return arr;
-  }
-  function cmp(a,b){
-    const A = (a||'').toLowerCase();
-    const B = (b||'').toLowerCase();
-    return A.localeCompare(B);
-  }
-
-  function apply(){
-    const q = elSearch.value.trim();
-    const s = elSort.value;
-    const filtered = data.filter(m=>matches(m,q));
-    render(sortList(filtered, s));
-  }
-
-  elSearch.addEventListener('input', debounce(apply, 120));
-  elSort.addEventListener('change', apply);
-
-  // initial
-  apply();
-
-  function debounce(fn, wait){
-    let t;return function(){
-      clearTimeout(t);t=setTimeout(()=>fn.apply(this,arguments), wait);
-    }
-  }
+  // Render tất cả thành viên
+  render(data);
 })();
