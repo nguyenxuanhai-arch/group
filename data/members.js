@@ -40,10 +40,11 @@ window.GROUP_MEMBERS = [
     image: "assets/img/huong.jpg"
   },
   {
-    name: "Hoàng Gia Triệu Phú (Đang cập nhật)",
+    name: "Hoàng Gia Triệu Phú",
     role: "Full Stack Developer",
-    url: "#",
-    tags: ["React","Node.js","Web Development"],
+    url: "https://phuhgt2005.github.io/Portfolio/",
+    tags: ["HTML5","CSS3","JavaScript","PHP","Python", "C++"],
     emoji: "🚀",
+    image: "assets/img/phu.jpg"
   }
 ];
